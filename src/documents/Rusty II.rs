@@ -203,5 +203,33 @@ diyorlar çünkü struct ile associated'lar.
 
 */
 
-/*Enums - KALDIĞIMIZ YER : https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html
-LİSTİNG 6-2/*
+/*
+Error Handling. For examples, see : src/error_handling
+For example, if you have a type rather than an Option, your program expects to have something
+rather than nothing. Your code then doesn’t have to handle two cases for the Some and None variants:
+it will only have one case for definitely having a value. Code trying to pass nothing to your
+function won’t even compile, so your function doesn’t have to check for that case at runtime.
+Another example is using an unsigned integer type such as u32, which ensures the parameter is never
+negative.
+
+*/
+
+/*
+GENERICS
+Generic'ler performansta bir maliyete sebep olmuyorlar. Rust bunu koda monomorphization islemi
+uygulayarak yapıyor (derleme zamanında)
+
+*/
+
+/*
+TRAITS
+Interface'lere benzerler.
+
+*/
+
+
+/*
+TESTS
+. The attribute cfg stands for configuration and tells Rust that the following item should only be
+included given a certain configuration option
+*/

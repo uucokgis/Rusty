@@ -1,6 +1,4 @@
 use std::{num, thread, time::Duration};
-use rand::Rng;
-
 extern crate rand;
 
 
@@ -17,7 +15,6 @@ fn create_random_number(start: u32, end: u32) -> u32 {
     rand::thread_rng().gen_range(start, end)
 
 }
-
 fn simulated_expensive_calculation(intensity: u32) -> u32 {
     println!("Calculating slowly ..");
     thread::sleep(Duration::from_secs(2));
@@ -25,20 +22,18 @@ fn simulated_expensive_calculation(intensity: u32) -> u32 {
 }
 
 fn generate_workout(intensity: u32, random_number: u32) {
-    let expensive_closure = |num| {
-        println!("Calculating slowly ...");
-        thread::sleep(Duration::from_secs(2));
-        num
-    };
+    let expensive_result = |num| {
+        println!
+    }
 
     if intensity < 25 {
-        println!("Today, do {} pushups", expensive_closure(intensity));
-        println!("Next, do {} situps !", expensive_closure(intensity));
+        println!("Today, do {} pushups", expensive_result);
+        println!("Next, do {} situps !", expensive_result);
     } else {
         if random_number == 3 {
             println!("Take a break today ! Remember to stay hydrated !");
         } else {
-            println!("Today, run for {} minutes", expensive_closure(intensity));
+            println!("Today, run for {} minutes", expensive_result);
         }
     }
 }

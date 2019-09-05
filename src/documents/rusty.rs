@@ -2,6 +2,13 @@
 // umut ucok, 2019.
 
 /*
+Her seyden evvel onemli bir bilgi: Windows'ta Rust programının debug edilmesi:
+rustup install stable-gnu
+rustup default stable-gnu
+
+yazınız.
+
+/*
 Rust'ta variable'lar N.S.A immutable'dır. Örneğin
 let foo = 5;
 

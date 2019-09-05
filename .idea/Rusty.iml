@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CPP_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Python" name="Python facet">
+      <configuration sdkName="Python 3.7 " />
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/rusty/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/rusty/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/rusty/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/rusty/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/main/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/main/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/main/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/main/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/restauran/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/restauran/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/restauran/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/restauran/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/restaurantlib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/restaurantlib/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/restaurantlib/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/restaurantlib/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/datatypes/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/datatypes/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/datatypes/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/datatypes/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/adder/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/adder/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/adder/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/adder/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testsample/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testsample/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testsample/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testsample/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/main\examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/main\tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/main\benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../Rusty\examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../Rusty\benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testsample\examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testsample\tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testsample\benches" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/main/target" />
+      <excludeFolder url="file://$MODULE_DIR$/restauran/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/adder/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/datatypes/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/restaurantlib/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/rusty/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/testsample/target" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Python 3.7  interpreter library" level="application" />
+  </component>
+</module>
