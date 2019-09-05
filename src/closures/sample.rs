@@ -1,4 +1,6 @@
 use std::{num, thread, time::Duration};
+use rand::Rng;
+
 extern crate rand;
 
 
@@ -15,6 +17,7 @@ fn create_random_number(start: u32, end: u32) -> u32 {
     rand::thread_rng().gen_range(start, end)
 
 }
+
 fn simulated_expensive_calculation(intensity: u32) -> u32 {
     println!("Calculating slowly ..");
     thread::sleep(Duration::from_secs(2));
@@ -22,22 +25,31 @@ fn simulated_expensive_calculation(intensity: u32) -> u32 {
 }
 
 fn generate_workout(intensity: u32, random_number: u32) {
-    let expensive_result = simulated_expensive_calculation(intensity);
+    let expensive_closure = |num| {
+        println!("Calculating slowly ...");
+        thread::sleep(Duration::from_secs(2));
+        num
+    };
 
     if intensity < 25 {
-        println!("Today, do {} pushups", expensive_result);
-        println!("Next, do {} situps !", expensive_result);
+        println!("Today, do {} pushups", expensive_closure(intensity));
+        println!("Next, do {} situps !", expensive_closure(intensity));
     } else {
         if random_number == 3 {
             println!("Take a break today ! Remember to stay hydrated !");
         } else {
-            println!("Today, run for {} minutes", expensive_result);
+            println!("Today, run for {} minutes", expensive_closure(intensity));
         }
     }
-}
 
-/*
-We want to define code in one place in our program, but only execute that code where we actually
-need the result. This is a use case for closures!
-see : intro
-*/
+    // another basic closure function
+    let _closure_test = |samplenum: i32| -> i32{
+        samplenum
+    };
+
+    /*
+    Note that, If you don't specify type of the value, rust infer that type as type of first used
+    line parameters. I mean if you use clouse function with a string for the first time, it has
+    to be used with string type. Otherwise, compiler raises an error.
+    */
+}

@@ -233,3 +233,36 @@ TESTS
 . The attribute cfg stands for configuration and tells Rust that the following item should only be
 included given a certain configuration option
 */
+
+/*
+Closures
+Closure'lar lazy function'lardır. Çok karmaşık olabilirler özellikle traitle beraber
+generic olarak kullanıldıklarında.
+örnekler için:
+see: src/closures
+
+When a closure captures a value from its environment, it uses memory to store the values for use in
+the closure body. This use of memory is overhead that we don’t want to pay in more common cases where
+we want to execute code that doesn’t capture its environment. Because functions are never allowed to
+capture their environment, defining and using functions will never incur this overhead.
+
+Closures can capture values from their environment in three ways, which directly map to the three ways
+a function can take a parameter: taking ownership, borrowing mutably, and borrowing immutably.
+These are encoded in the three Fn traits as follows:
+
+    FnOnce consumes the variables it captures from its enclosing scope, known as the closure’s environment.
+    To consume the captured variables, the closure must take ownership of these variables and move them
+    into the closure when it is defined. The Once part of the name represents the fact that the closure
+    can’t take ownership of the same variables more than once, so it can be called only once.
+
+    FnMut can change the environment because it mutably borrows values.
+
+    Fn borrows values from the environment immutably.
+
+
+Concurrency note:
+If you want to force the closure to take ownership of the values it uses in the environment, you can
+use the move keyword before the parameter list. This technique is mostly useful when passing a closure
+to a new thread to move the data so it’s owned by the new thread.
+
+*/

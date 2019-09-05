@@ -53,7 +53,7 @@ olan T çok yaygın.
             y: T
         }
 
-        // this will not work
+        // below one will not work
 //    let wont_work = Point {x:6, y:1.2};
 
         /*

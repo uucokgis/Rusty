@@ -112,4 +112,28 @@ pub mod advanced_hashmaps {
             *count += 1; // We need to add. Otherwise all will be count as 0
         }
     }
+
+    // hashmap with generics
+    fn _create_hashmap(param1: u32, param2: u32) -> HashMap<u32, u32> {
+        let mut v: HashMap<u32, u32> = HashMap::new();
+        v.insert(param1, param2);
+        v
+    }
+
+    fn _create_hashmap_generic <U> (param1: U, param2: U) -> HashMap<U, U>
+        where U: Eq + Hash
+    {
+        let mut v:HashMap<U, U>= HashMap::new();
+        v.insert(param1, param2);
+        v
+    }
+
+    fn _create_hashmap_multigeneric<U, V> (param1: U, param2: V) -> HashMap<U, V>
+        where U: Eq + Hash,
+              V: Eq + Hash
+    {
+        let mut v: HashMap<U, V> = HashMap::new();
+        v.insert(param1, param2);
+        v
+    }
 }

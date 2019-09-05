@@ -22,9 +22,6 @@ fn simulated_expensive_calculation(intensity: u32) -> u32 {
 }
 
 fn generate_workout(intensity: u32, random_number: u32) {
-    let expensive_result = |num| {
-        println!
-    }
 
     if intensity < 25 {
         println!("Today, do {} pushups", expensive_result);
