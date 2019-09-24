@@ -193,6 +193,7 @@ Pointer üzerindeki metodu çağırdığınızda önce onu dereference etmeniz g
 Her neyse, Rust'ta -> meselesi yok, çünkü automatic referencing and dereferencing denilen bir
 özelliği var ve böylelikle bu işleri tek kalemde yapıyor. Mesela şunlar aynıdır:
 p1.distance(&p2);                  ile                    (&p1).distance(&p2);
+Tabii Rust'ta -> işareti var ama fonksiyonun döndüreceği tipi belirtirken kullanıyoruz.
 
 */
 /* Methods - III / Associated Functions
@@ -266,3 +267,32 @@ use the move keyword before the parameter list. This technique is mostly useful 
 to a new thread to move the data so it’s owned by the new thread.
 
 */
+
+/* Crates:
+- Rust'ta crate comment'ler example'lar panicler falan /// ile yazılır.
+Crate hakkında bilgi veren yazılar //! ile yazılır
+
+    crates.io
+
+cargo publish ile crates.io'ya gönderilir.
+
+cargo yank ile belirli bir versiyon kullanıma yasaklanabilir. Bu senin yazdığın crate bozuk
+olduğunda kullanışlı bir şey:
+cargo yank --vers 1.0.1
+
+undo ile de geri alınabilir.
+cargo yank --vers 1.0.1 --undo
+
+Yank ile kod silinmez. crates.io'daki hiçbir kod silinmez aslında.
+Yank ile yeni versiyonu atılan crate etkilenmez.
+
+our token : cargo login s0kFyCAeFG1UI3xXD7GKz2x4ynTS02hi
+token name : kuttamuwa
+
+
+
+
+    Crates -p
+Workspace'lerle çalışırken bir binary package'i çalıştırmak istediğinde -p kullan:
+cargo run -p adder
+

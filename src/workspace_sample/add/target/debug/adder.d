@@ -1,0 +1,1 @@
+C:\Users\umut\CLionProjects\Rusty\src\workspace_sample\add\target\debug\adder.exe: C:\Users\umut\CLionProjects\Rusty\src\workspace_sample\add\add-lib\src\lib.rs C:\Users\umut\CLionProjects\Rusty\src\workspace_sample\add\adder\src\main.rs

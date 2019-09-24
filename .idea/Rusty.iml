@@ -47,13 +47,34 @@
       <sourceFolder url="file://$MODULE_DIR$/src/testsample\examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/testsample\tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testsample\benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/my_crate/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/my_crate\examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/my_crate\tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/my_crate\benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/new_crate/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/new_crate\examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/new_crate\tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/new_crate\benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/adder/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/adder\examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/adder\tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/adder\benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib\examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib\tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib\benches" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/main/target" />
       <excludeFolder url="file://$MODULE_DIR$/restauran/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/adder/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/datatypes/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/my_crate/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/new_crate/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/restaurantlib/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/rusty/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/testsample/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib\target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/workspace_sample/add/adder\target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/workspace_sample/add/target" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
