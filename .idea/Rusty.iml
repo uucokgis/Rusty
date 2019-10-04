@@ -63,6 +63,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib\examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib\tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib\benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker\examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker\tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker\benches" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/main/target" />
       <excludeFolder url="file://$MODULE_DIR$/restauran/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/adder/target" />
@@ -71,6 +75,7 @@
       <excludeFolder url="file://$MODULE_DIR$/src/new_crate/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/restaurantlib/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/rusty/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/testsample/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib\target" />
       <excludeFolder url="file://$MODULE_DIR$/src/workspace_sample/add/adder\target" />

@@ -4,6 +4,31 @@ Box<T> for allocating values on the heap
 Rc<T>, a reference counting type that enables multiple ownership
 Ref<T> and RefMut<T>, accessed through RefCell<T>, a type that enforces the borrowing rules at runtime instead of compile time
 
+With references and Box<T>, the borrowing rules’ invariants are enforced at compile time.
+With RefCell<T>, these invariants are enforced at runtime.
+
+The RefCell<T> type is useful when you’re sure your code follows the borrowing rules but the compiler
+is unable to understand and guarantee that.
+
+Similar to Rc<T>, RefCell<T> is only for use in single-threaded scenarios and will give you a
+compile-time error if you try using it in a multithreaded context
+
+
+Rc<T> enables multiple owners of the same data; Box<T> and RefCell<T> have single owners.
+
+Box<T> allows immutable or mutable borrows checked at compile time; Rc<T> allows only immutable borrows
+checked at compile time; RefCell<T> allows immutable or mutable borrows checked at runtime.
+
+Because RefCell<T> allows mutable borrows checked at runtime, you can mutate the value inside the
+RefCell<T> even when the RefCell<T> is immutable.
+
+Mutating the value inside an immutable value is the interior mutability pattern.
+
+The standard library has other types that provide interior mutability, such as Cell<T>, which is
+similar except that instead of giving references to the inner value, the value is copied in and out
+of the Cell<T>. There’s also Mutex<T>, which offers interior mutability that’s safe to use across
+threads; we’ll discuss its use in Chapter 16. Check out the standard library docs for more details on
+the differences between these types.
 */
 
 /*
@@ -127,5 +152,35 @@ However, there are cases when a single value might have multiple owners
 
 Note that Rc<T> is only for use in single-threaded scenarios. When we discuss concurrency in Chapter 16,
 we’ll cover how to do reference counting in multithreaded programs.
+
+*/
+
+/*
+References Cycle
+Burayı türkçe anlatmak istiyorum.
+Diyelim ki bir a variable'ı olsun. Bu değişken Rc'ler RefCell'ler gibi Box'lar tutuyor.
+Bir de b variable'ı olsun. a ile b arasında da ilişki var. Şu şekilde:
+let b = Rc::new(Cons(10, RefCell::new(Rc::clone(&a))));
+Yani Rc::clone ile a referansı arttırılarak b'nin box'ının içine basılıyor.
+
+Scope dışına çıktığımız zaman maalesef a'nın referans sayısı 0 olmayacak ve o değer silinmeyecek.
+Çözüm:
+- Referans cycle'lar her zaman oluşmaz. Bunu oluşturmamaya dikkat edebiliriz.
+- Rust, senin interior mutability de kattığın iç içe Rc'li Refcell'li boxlardaki reference cycle'ları
+tespit edemez. Reference cycle'lar logic bir bug da olabilir çünkü.
+- Yapıyı değiştirmek. İç içe rc refcell'ler değiştirilir. Gerekirse data'yı gerçek clone'larsın.
+Rc'leri Weak'lere çevirmek:
+Weak'lar ch15-06'da anlatılan bir Box tipi. üretildiğinde sana bir Weak smart pointer döndürüyor.
+Bu pointer Rc::downgrade ile referansları 0'a düşürebiliyor. Rc'den farkı silinmesi için 0'a
+düşmesine gerek olmaması.
+
+*/
+
+/*
+*leaf.parent.borrow_mut() = ... muhabbeti  EXPLAINED
+şimdi şöyle ki, borrow mut dediğimiz zaman leaf.parent'ın &mut hali bulunur. Örneğin leaf
+Rc<Node> ise ve leaf.parent da RefCell<Weak<Node>> ise, &mut Weak<Node> elde edersin.
+Sonra bunu dereference ederek Weak<Node> eline geçer ki değiştirmek istediğimiz değer de tam olarak
+budur. Bunu mesela Rc::downgrade(&leaf) ile kullanabilirsin.
 
 */
