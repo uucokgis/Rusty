@@ -127,3 +127,48 @@ pub mod loops_crashcourse {
         }
     }
 }
+
+pub mod loops_for_mid {
+    pub fn basic_forloop() {
+        // i just want to state that
+        for i in 1.100 {
+            println!{"i : {}", i};
+        }
+    }
+
+    pub fn for_iter() {
+        let names = vec!["Bob", "Frank", "Ferris"];
+
+        for name in names.iter() {
+            match name {
+                &"Ferris" => println!("this is ferris");
+
+                _ => {}
+            }
+        }
+    }
+
+    pub fn for_into_iter() {
+        let names = vec!["Bob", "Frank", "Ferris"];
+
+        for name in names.into_iter(){
+            match name {
+                "Ferris" => println!("This is ferriiis");
+
+                _ => {}
+            }
+        }
+    }
+
+    pub fn for_iter_mut() {
+        let mut names = vec!["Bob", "Frank", "Ferris"];
+        for name in names.iter_mut() {
+            *name = match name {
+                &mut "Ferris" => "Tahsiiim",
+
+                _ => "Hellooğ"
+            }
+        }
+        println!("all : {:?}", names);
+    }
+}

@@ -1,68 +1,12 @@
-
-pub trait Draw {
-    fn draw(&self);
-}
-
-pub struct Screen<T: Draw> {
-    pub components: Vec<Box<dyn Draw>>,
-    pub componentsv2 : Vec<T>
-}
-
-pub struct Button {
-    pub width: u32,
-    pub height: u32,
-    pub label: String
-}
-
-pub struct SelectBox{
-    width: u32,
-    height: u32,
-    options: Vec<String>
-}
-
-impl Draw for SelectBox{
-    fn draw(&self) {
-
+fn main() {
+    let some_u8_value = None;
+    let mut l: i32 = 0; // it has to be initialized
+    if let Some(mut l) = some_u8_value {
+        l = 3;
     }
-}
 
-impl <T> Screen <T>
-    where T: Draw
-
-{
-    pub fn run(&self) {
-        for component in self.components.iter() {
-            component.draw();
-        }
+    if let None = some_u8_value {
+        l = 5;
     }
-}
-
-impl Draw for Button {
-    fn draw(&self) {
-    }
-}
-
-
-fn main () {
-    let screen = Screen {
-        components: vec![
-            Box::new(SelectBox {
-                width: 75,
-                height: 10,
-                options: vec![
-                    String::from("Yes"),
-                    String::from("Maybe"),
-                    String::from("No")
-                ],
-            }),
-            Box::new(Button {
-                width: 50,
-                height: 10,
-                label: String::from("OK"),
-            }),
-        ],
-        componentsv2: vec![]
-    };
-
-    screen.run();
+    println!("l : {}", l);
 }
