@@ -1,3 +1,4 @@
+// Turkish - English combine
 // rusty gittikçe çok uzadı bazı şeyler bulmakta zorlaşıyor.
 // bu yüzden de references ve borrowing bölümünden sonra ele alınacak şeyleri buraya yazdım.
 

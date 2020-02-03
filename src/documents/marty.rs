@@ -1,3 +1,5 @@
+// Turkish
+
 // buradaki notlar Rust ile alakalı ama onunla direk alakalı olmayan, computer science ile
 // daha çok alakalı şeylerdir.
 

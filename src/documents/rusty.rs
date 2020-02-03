@@ -1,3 +1,4 @@
+// Turkish - English combine
 // rusttaki notlari buraya yazmaya karar verdim.
 // umut ucok, 2019.
 
