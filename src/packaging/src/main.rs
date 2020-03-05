@@ -1,16 +1,22 @@
 mod importer;
-mod restaurant;
+mod dining;
 
-use crate::importer::Thing;  // use kullanımına bi örnek
+/*
+todo: But I cannot figure out how to call packaging/restaurant module
+*/
+
+use crate::importer::Thing as Sey;
+use std::fs::File;  // use kullanımına bi örnek
 
 fn main() {
     println!("Hello, world!");
 
     // importer test
-    let a = Thing::new();
+    let a = Sey::new();
     println!("a: {:?}", a);
-
-    // restaurant test
-    let b = restaurant::back_of_house::Breakfast::summer("kaşarlı");
+    // dining test
+    let b = dining::back_of_house::Breakfast::summer("kaşarlı");
     println!("b: {:?}", b.toast);
+
+    let f = File::open("fasd.txt").unwrap();
 }
