@@ -59,12 +59,32 @@
       <sourceFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging_env/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging_env/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging_env/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging_env/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging_env/restaurant/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging_env/restaurant/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging_env/restaurant/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging_env/restaurant/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging_env/stackoverfl/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging_env/stackoverfl/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging_env/stackoverfl/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging_env/stackoverfl/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging/benches" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/main/target" />
       <excludeFolder url="file://$MODULE_DIR$/restauran/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/adder/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/datatypes/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/my_crate/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/new_crate/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/packaging/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/packaging_env/restaurant/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/packaging_env/stackoverfl/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/packaging_env/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/restaurantlib/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/rusty/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker/target" />
