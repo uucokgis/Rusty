@@ -87,9 +87,14 @@
       <sourceFolder url="file://$MODULE_DIR$/src/packaging/packaging/src/excel_importer/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/packaging/packaging/src/excel_importer/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/packaging/packaging/src/excel_importer/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/cli_test/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/cli_test/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/cli_test/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/cli_test/benches" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/main/target" />
       <excludeFolder url="file://$MODULE_DIR$/restauran/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/adder/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/cli_test/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/datatypes/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/my_crate/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/new_crate/target" />

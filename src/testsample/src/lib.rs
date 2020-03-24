@@ -1,3 +1,7 @@
+/* Not: Bazı diğer dizinlerde örnekler bulabilirsiniz:
+see: src/packaging/packaging/src/excel_importer/src/reader/csvreader.rs
+*/
+
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
