@@ -8,14 +8,14 @@ fn main() {
 
 }
 
-//fn scope_sample() {
-//    {                      // s is not valid here, it’s not yet declared
-//        let s = "hello";   // s is valid from this point forward
-//
-//// do stuff with s
-//    }
-//    // this scope is now over, and s is no longer valid
-//
-//    println!("s nedir : {}", s) // hata verir.
-//}
+fn scope_sample() {
+   {                      // s is not valid here, it’s not yet declared
+       let s = "hello";   // s is valid from this point forward
+
+// do stuff with s
+   }
+   // this scope is now over, and s is no longer valid
+
+   println!("s nedir : {}", s) // hata verir.
+}
 
