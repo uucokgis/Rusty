@@ -1,6 +1,7 @@
-use crate::config_types::CLIConfig;
-use std::env;
-fn main () {
+use std::{env, fs};
+use std::path::Path;
+
+fn main() {
     // iterator style
     let contents = reading_file::read_contents(reading_file::read_cli_iterator());
     println!("contents of the file with iterator : {}\n\n", contents);
@@ -19,15 +20,15 @@ fn main () {
 
 }
 
+
 mod reading_file {
     use super::config_types;
     use std::{env, process};
     use std::fs;
-    use std::path::Path;
     use crate::config_types::CLIConfig;
     use std::error::Error;
 
-    pub fn read_cli() -> CLIConfig{
+    pub fn read_cli() -> CLIConfig {
         let args: Vec<String> = env::args().collect();
         let config = config_types::CLIConfig::new(&args)
             .unwrap_or_else(|err| {
@@ -46,7 +47,6 @@ mod reading_file {
         //     }
         // };
         config
-
     }
 
     pub fn read_cli_iterator() -> CLIConfig {
@@ -58,7 +58,6 @@ mod reading_file {
             });
 
         config
-
     }
 
     pub fn read_cli_ue(config: CLIConfig) -> Result<(), Box<dyn Error>> {
@@ -70,10 +69,10 @@ mod reading_file {
 
     pub fn read_contents(config: config_types::CLIConfig) -> String {
         fs::read_to_string(config.filename)
-                .expect("Error occured while reading the file")
+            .expect("Error occured while reading the file")
     }
 
-    pub fn search_word <'a> (word: &'a str, contents: &'a str) -> Vec<&'a str> {
+    pub fn search_word<'a>(word: &'a str, contents: &'a str) -> Vec<&'a str> {
         let mut result: Vec<&str> = Vec::new();
         for w in contents.lines() {
             if w.contains(word) {
@@ -84,7 +83,7 @@ mod reading_file {
         result
     }
 
-    pub fn search_word_insensitive <'a> (word: &'a str, contents: &'a str, case_sensitive: Option<bool>) -> Vec<&'a str> {
+    pub fn search_word_insensitive<'a>(word: &'a str, contents: &'a str, case_sensitive: Option<bool>) -> Vec<&'a str> {
         let case_sensitive = match case_sensitive {
             None => {
                 println!("Case sensitive set false");
@@ -104,39 +103,35 @@ mod reading_file {
                     result.push(w);
                 }
             }
-
         }
 
         result
     }
 }
+
 mod config_types {
     use std::env;
 
     pub struct CLIConfig {
         pub query: String,
-        pub filename: String
-
+        pub filename: String,
     }
 
     impl CLIConfig {
         pub fn new(args: &[String]) -> Result<CLIConfig, &'static str> {
             if args.len() != 3 {
                 return Err("There has to be 2 argument");
-            }
-
-            else {
+            } else {
                 let filename = args[2].clone();
                 let query = args[1].clone();
 
                 Ok(
                     CLIConfig {
                         query,
-                        filename
+                        filename,
                     }
                 )
             }
-
         }
 
         pub fn new_with_iterator(mut args: env::Args) -> Result<CLIConfig, &'static str> {
@@ -154,11 +149,19 @@ mod config_types {
 
             Ok(CLIConfig {
                 query,
-                filename
+                filename,
             })
         }
     }
 }
 
+#[test]
+fn read_one_line() {
+    let file_path = "/home/umut/CLionProjects/Rusty/src/cli_test/data/poem.txt".trim();
+    let query = "To";
 
-
+    let one_line_contens = fs::read_to_string(Path::new(&file_path))
+        .unwrap();
+    let filtered_contens = one_line_contens.lines().filter(|l| l.contains(query)).collect::<Vec<&str>>();
+    println!("fff : {:?}", filtered_contens);
+}
