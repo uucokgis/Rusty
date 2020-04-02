@@ -1,6 +1,10 @@
 use crate::config_types::CLIConfig;
 use std::env;
 fn main () {
+    // iterator style
+    let contents = reading_file::read_contents(reading_file::read_cli_iterator());
+    println!("contents of the file with iterator : {}\n\n", contents);
+
     let contents = reading_file::read_contents(reading_file::read_cli());
     println!("contents of the file : \n{}", contents);
 
@@ -11,6 +15,8 @@ fn main () {
     // 1 is True, 2 is false
     let case_sensitive_env = env::var("CASE_INSENSITIVE").is_err();
     println!("case insensitive environment variable : {}", case_sensitive_env);
+
+
 }
 
 mod reading_file {
@@ -39,6 +45,18 @@ mod reading_file {
         //         panic!("asdasd");
         //     }
         // };
+        config
+
+    }
+
+    pub fn read_cli_iterator() -> CLIConfig {
+        let args = env::args();
+        let config = config_types::CLIConfig::new_with_iterator(args)
+            .unwrap_or_else(|err| {
+                println!("Problem parsing the arguments");
+                process::exit(1);
+            });
+
         config
 
     }
@@ -93,6 +111,8 @@ mod reading_file {
     }
 }
 mod config_types {
+    use std::env;
+
     pub struct CLIConfig {
         pub query: String,
         pub filename: String
@@ -106,8 +126,8 @@ mod config_types {
             }
 
             else {
-                let filename = args[1].clone();
-                let query = args[2].clone();
+                let filename = args[2].clone();
+                let query = args[1].clone();
 
                 Ok(
                     CLIConfig {
@@ -117,6 +137,25 @@ mod config_types {
                 )
             }
 
+        }
+
+        pub fn new_with_iterator(mut args: env::Args) -> Result<CLIConfig, &'static str> {
+            args.next();
+
+            let query = match args.next() {
+                Some(ar) => ar,
+                None => return Err("There is no query param")
+            };
+
+            let filename = match args.next() {
+                Some(f) => f,
+                None => return Err("There is no filename param")
+            };
+
+            Ok(CLIConfig {
+                query,
+                filename
+            })
         }
     }
 }
