@@ -5,8 +5,6 @@ mod advancedv1 {
 
     impl Drop for CustomSmartPointer {
         fn drop(&mut self) {
-            let data = &self.data;
-            println!("data : {}", data);
             println!("Dropping CustomSmartPointer with data : {}", &self.data);
 
         }

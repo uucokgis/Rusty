@@ -19,7 +19,7 @@ pub fn intro () {
 }
 
 /*
-Ornegin longest fonksiyonunu yazalım. Generic type kullanmadan iki tane borrowed deger
+Ornegin longest fonksiyonunu yazalım. iki tane borrowed deger
 alıp gene pointer dondureceksek Rust bize hata verecektir cunku dondurulen referans degeri
 birincinin mi ikincinin mi oldugu anlasilamaz.
 
