@@ -2,7 +2,7 @@
 <module type="CPP_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Python" name="Python facet">
-      <configuration sdkName="Python 3.7 " />
+      <configuration sdkName="" />
     </facet>
   </component>
   <component name="NewModuleRootManager">
@@ -39,67 +39,72 @@
       <sourceFolder url="file://$MODULE_DIR$/src/testsample/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/testsample/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testsample/benches" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/main\examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/main\tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/main\benches" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../Rusty\examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../Rusty\benches" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testsample\examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testsample\tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testsample\benches" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/my_crate/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/my_crate\examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/my_crate\tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/my_crate\benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/my_crate/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/my_crate/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/my_crate/benches" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/new_crate/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/new_crate\examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/new_crate\tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/new_crate\benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/new_crate/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/new_crate/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/new_crate/benches" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/adder/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/adder\examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/adder\tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/adder\benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/adder/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/adder/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/adder/benches" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib\examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib\tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib\benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib/benches" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker\examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker\tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker\benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker/benches" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/post/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/post\examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/post\tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/post\benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/post/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/post/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/post/benches" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/modules_structure/libone/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/modules_structure/libone\examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/modules_structure/libone/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/modules_structure/libone/tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/modules_structure/libone\benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/modules_structure/libone/benches" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/modules_structure/src/libtwo/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/modules_structure/src/libtwo\examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/modules_structure/src/libtwo\tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/modules_structure/src/libtwo\benches" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/modules_structure/libone\tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/modules_structure/src/libtwo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/modules_structure/src/libtwo/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/modules_structure/src/libtwo/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging/packaging/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging/packaging/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging/packaging/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging/packaging/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging/packaging/src/excel_importer/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging/packaging/src/excel_importer/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging/packaging/src/excel_importer/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/packaging/packaging/src/excel_importer/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/cli_test/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/cli_test/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/cli_test/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/cli_test/benches" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/main/target" />
       <excludeFolder url="file://$MODULE_DIR$/restauran/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/adder/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/cli_test/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/datatypes/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/modules_structure/libone/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/modules_structure/src/libtwo/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/my_crate/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/new_crate/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/packaging/packaging/src/excel_importer/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/packaging/packaging/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/post/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/restaurantlib/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/rusty/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/testsample/target" />
-      <excludeFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib\target" />
-      <excludeFolder url="file://$MODULE_DIR$/src/workspace_sample/add/adder\target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/workspace_sample/add/add-lib/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/workspace_sample/add/adder/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/workspace_sample/add/target" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Python 3.7  interpreter library" level="application" />
   </component>
 </module>
