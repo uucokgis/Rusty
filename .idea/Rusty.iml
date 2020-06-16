@@ -83,11 +83,16 @@
       <sourceFolder url="file://$MODULE_DIR$/src/cli_test/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/cli_test/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/cli_test/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/gui/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/gui/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/gui/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/gui/benches" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/main/target" />
       <excludeFolder url="file://$MODULE_DIR$/restauran/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/adder/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/cli_test/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/datatypes/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/gui/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/modules_structure/libone/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/modules_structure/src/libtwo/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/my_crate/target" />
