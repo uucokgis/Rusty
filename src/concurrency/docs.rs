@@ -87,5 +87,7 @@ Therefore, Rust’s type system and trait bounds ensure that you can never accid
 Almost all primitive types are Send, aside from raw pointers, is discussed in Chapter 19.
 The RefCell<T> type (which we talked about in Chapter 15) and the family of related Cell<T> types are not Sync
 
-Manually implementing these traits (Send and Sync) involves implementing unsafe Rust code
+# Implementing Send and Sync Manually Is Unsafe
+Because types that are made up of Send and Sync traits are automatically also Send and Sync,
+we don’t have to implement those traits manually.
 */
