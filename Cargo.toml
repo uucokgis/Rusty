@@ -10,9 +10,5 @@ edition = "2018"
 rand = "0.7.3"
 
 [lib]
-name = "mocktesting"
-path = "src/mocktesting/src/lib.rs"
-
-[gui]
 name = "gui"
 path = "src/gui/src/lib.rs"
