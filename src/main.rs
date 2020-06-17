@@ -1,17 +1,13 @@
-// our gui
-
 use post::Post;
 
 fn main () {
-    let mut mypost = Post::new();
+    let mut p = Post::new();
+    p.add_text("my post");
+    println!("state of the post : {}", p.print_state());
 
-    mypost.add_text("I ate a salad for lunch today");
-    assert_eq!("", mypost.content());
+    p.request_review();
+    println!("state of the post : {}", p.print_state());
 
-    mypost.request_review();
-    assert_eq!("", mypost.content());
-
-    mypost.approve();
-    assert_eq!("I ate a salad for lunch today", mypost.content());
-
+    p.approve();
+    println!("state of the post : {}", p.print_state());
 }
