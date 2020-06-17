@@ -10,5 +10,5 @@ edition = "2018"
 rand = "0.7.3"
 
 [lib]
-name = "gui"
-path = "src/gui/src/lib.rs"
+name = "post"
+path = "src/post/src/lib.rs"
