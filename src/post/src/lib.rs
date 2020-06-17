@@ -1,20 +1,48 @@
 use std::fmt::Error;
+use std::cell::RefCell;
+use std::borrow::BorrowMut;
 
 #[cfg(test)]
 mod tests {
+    /*
+
+    Add a reject method that changes the post’s state from PendingReview back to Draft.
+    OK
+
+    Require two calls to approve before the state can be changed to Published.
+    OK
+
+    Allow users to add text content only when a post is in the Draft state. Hint: have the state
+    object responsible for what might change about the content but not responsible for modifying the Post.
+    OK
+
+    */
     use crate::Post;
 
     #[test]
     fn check_approving_for_only_pending_reviews() {
         let mut p = Post::new();
+        assert_eq!(p.print_state(), "Draft");
+
         p.add_text("my post");
-        println!("state of the post : {}", p.print_state());
+        assert_eq!(p.print_state(), "Draft");
 
         p.request_review();
-        println!("state of the post : {}", p.print_state());
+        assert_eq!(p.print_state(), "PendingReview");
+
+        // p.reject();
+        // println!("state of the post : {}", p.print_state());
 
         p.approve();
+        assert_ne!(p.print_state(), "Published");
+
+        p.approve();
+        assert_eq!(p.print_state(), "Published");
+
         println!("state of the post : {}", p.print_state());
+
+        // p.reject();
+        // println!("state of the post : {}", p.print_state());
     }
 }
 
@@ -28,6 +56,10 @@ trait State {
     fn approve(self: Box<Self>) -> Result<Box<dyn State>, Error>;
 
     fn reject(self: Box<Self>) -> Result<Box<dyn State>, Error>;
+
+    fn reset_approved_count(&self);
+
+    fn increase_approved_count(&self);
 
     // fn give_history(&self) -> &Vec<Box<dyn State>> {
     //     self.history
@@ -46,17 +78,28 @@ impl Post {
         Post {
             state: Some(Box::new(Draft {})),
             content: String::new(),
-            history: vec![]
+            history: vec![],
         }
-    }
-
-    pub fn add_text(&mut self, text: &str) {
-        self.content.push_str(text);
     }
 
     pub fn request_review(&mut self) {
         if let Some(s) = self.state.take() {
-            self.state = Some(Box::new(PendingReview {}))
+            self.state = Some(Box::new(PendingReview::new()))
+        }
+    }
+
+    pub fn add_text(&mut self, text: &str) {
+        let s = &self.state;
+        match s {
+            Some(stat) => {
+                match stat.get_state_enum() {
+                    StateTypes::Draft => {
+                        self.content.push_str(text)
+                    },
+                    _ => {}
+                }
+            }
+            _ => {}
         }
     }
 
@@ -64,9 +107,8 @@ impl Post {
         if let Some(s) = self.state.take() {
             match s.approve() {
                 Ok(t) => {
-
                     self.state = Some(t);
-                    println!("Approved !");
+
                     // remember old style
                     // let state_enum = &s.get_state_enum();
                     // self.history.push(s.get_state_enum());
@@ -91,7 +133,17 @@ impl Post {
         }
     }
     pub fn print_state(&self) -> &str {
-        let msg = self.state.as_ref().unwrap().print_state();
+        let st = self.state.as_ref();
+
+        let msg = match st {
+            Some(s) => {
+                s.print_state()
+            }
+            _ => {
+                ""
+            }
+        };
+
         msg
     }
 }
@@ -106,7 +158,7 @@ struct Draft {}
 
 impl State for Draft {
     fn request_review(self: Box<Self>) -> Box<dyn State> {
-        Box::new(PendingReview {})
+        Box::new(PendingReview { approved_count: RefCell::new(0) })
     }
 
     fn print_state(&self) -> &str {
@@ -121,13 +173,31 @@ impl State for Draft {
         panic!("Only reviewing request objects can be aproved !")
     }
 
-    fn reject(self: Box<Self>) -> Result<Box<dyn State>, Error>{
+    fn reject(self: Box<Self>) -> Result<Box<dyn State>, Error> {
         println!("Draft objects can't be rejected !");
         Ok(self)
     }
+
+    fn reset_approved_count(&self) {
+        unimplemented!()
+    }
+
+    fn increase_approved_count(&self) {
+        unimplemented!()
+    }
 }
 
-struct PendingReview {}
+struct PendingReview {
+    approved_count: RefCell<u8>  // more than one editor?
+}
+
+impl PendingReview {
+    fn new() -> PendingReview {
+        PendingReview {
+            approved_count: RefCell::new(0)
+        }
+    }
+}
 
 impl State for PendingReview {
     fn request_review(self: Box<Self>) -> Box<dyn State> {
@@ -136,7 +206,7 @@ impl State for PendingReview {
     }
 
     fn print_state(&self) -> &str {
-        "Pending Reviewing ..."
+        "PendingReview"
     }
 
     fn get_state_enum(&self) -> StateTypes {
@@ -144,15 +214,38 @@ impl State for PendingReview {
     }
 
     fn approve(self: Box<Self>) -> Result<Box<dyn State>, Error> {
-        Ok(Box::new(Published {}))
+        self.increase_approved_count();
+        println!("approved count : {}", &self.approved_count.borrow());
+
+        if self.approved_count.borrow().eq(&2) {
+            println!("Enough vote approved !");
+            Ok(Box::new(Published::new()))
+        } else {
+            println!("There is no enough approve vote !");
+            Ok(self)
+        }
     }
 
     fn reject(self: Box<Self>) -> Result<Box<dyn State>, Error> {
         Ok(Box::new(Draft {}))
     }
+
+    fn reset_approved_count(&self) {
+        *self.approved_count.borrow_mut() = 0;
+    }
+
+    fn increase_approved_count(&self) {
+        *self.approved_count.borrow_mut() += 1;
+    }
 }
 
 struct Published {}
+
+impl Published {
+    fn new() -> Published {
+        Published {}
+    }
+}
 
 impl State for Published {
     fn request_review(self: Box<Self>) -> Box<dyn State> {
@@ -161,7 +254,7 @@ impl State for Published {
     }
 
     fn print_state(&self) -> &str {
-        "Published !"
+        "Published"
     }
 
     fn get_state_enum(&self) -> StateTypes {
@@ -175,5 +268,13 @@ impl State for Published {
 
     fn reject(self: Box<Self>) -> Result<Box<dyn State>, Error> {
         panic!("Published objects cannot be rejected !")
+    }
+
+    fn reset_approved_count(&self) {
+        unimplemented!()
+    }
+
+    fn increase_approved_count(&self) {
+        unimplemented!()
     }
 }
