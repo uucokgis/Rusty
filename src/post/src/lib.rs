@@ -22,6 +22,9 @@ mod tests {
     #[test]
     fn check_approving_for_only_pending_reviews() {
         let mut p = Post::new();
+        let mut p2 = Post::new();
+        println!("state of the post 2 : {}", p2.print_state());
+
         assert_eq!(p.print_state(), "Draft");
 
         p.add_text("my post");
