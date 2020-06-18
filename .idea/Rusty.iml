@@ -87,6 +87,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src/gui/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/gui/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/gui/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/pycaps/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/pycaps/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/pycaps/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/pycaps/benches" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/main/target" />
       <excludeFolder url="file://$MODULE_DIR$/restauran/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/adder/target" />
@@ -100,6 +104,7 @@
       <excludeFolder url="file://$MODULE_DIR$/src/packaging/packaging/src/excel_importer/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/packaging/packaging/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/post/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/pycaps/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/restaurantlib/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/rusty/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/smart_pointers/tracker/target" />
